@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      how to fetch data from database in node js and display in html
+    </title>
+  </head>
+  <body>
+    <br />
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if(data.length){ for(var i = 0; i< data.length; i++) {%>
+        <tr>
+          <th scope="row"><%= (i+1) %></th>
+          <td><%= data[i].name%></td>
+          <td><%= data[i].email%></td>
+        </tr>
+        <% } }else{ %>
+        <tr>
+          <td colspan="3">No user</td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </body>
+</html>
